@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatUI", "ChatUI\ChatUI.csproj", "{450F89F6-862F-43CC-AE29-3684DE37112C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatBackend", "ChatBackend\ChatBackend.csproj", "{D6D43962-909F-46AA-925D-26709E98512B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{450F89F6-862F-43CC-AE29-3684DE37112C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{450F89F6-862F-43CC-AE29-3684DE37112C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{450F89F6-862F-43CC-AE29-3684DE37112C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{450F89F6-862F-43CC-AE29-3684DE37112C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D43962-909F-46AA-925D-26709E98512B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D43962-909F-46AA-925D-26709E98512B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D43962-909F-46AA-925D-26709E98512B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D43962-909F-46AA-925D-26709E98512B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8864B143-30EE-43C9-AD37-8E99E46CECD2}
+	EndGlobalSection
+EndGlobal

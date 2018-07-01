@@ -11,9 +11,13 @@
             <RowDefinition Height="35*" />
             <RowDefinition Height="35" />
         </Grid.RowDefinitions>
-        <TextBox Height="Auto" HorizontalAlignment="Stretch" Margin="6,6,6,6" Name="textBoxChatPane" VerticalAlignment="Stretch" Width="Auto" Grid.Row="0" />
-        <TextBox Height="23" HorizontalAlignment="Stretch" Margin="6,6,6,6" Name="textBoxEntryField" VerticalAlignment="Stretch" Width="Auto" Grid.Row="1"                   KeyDown="textBoxEntryField_KeyDown" />
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="120"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Height="Auto" HorizontalAlignment="Stretch" Margin="6,6,6,6" Name="textBoxChatPane" VerticalAlignment="Stretch" Width="Auto" Grid.ColumnSpan="2" />
+        <TextBox Height="23" HorizontalAlignment="Stretch" Margin="6,6,6,6" Name="textBoxEntryField" VerticalAlignment="Stretch" Width="Auto" Grid.Row="1" KeyDown="textBoxEntryField_KeyDown" />
+        <Button Content="Enviar archivo" Grid.Row="1" Grid.Column="1" Margin="6" Click="SendFile_Click"/>
     </Grid>
 
 </Window>

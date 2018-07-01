@@ -13,6 +13,7 @@ namespace ChatBackend
         #region Everything we need to receive messages 
 
         DisplayMessageDelegate _displayMessageDelegate = null;
+        DisplayMessageDelegate _displayFileDelegate = null;
 
         /// <summary>         
         /// The default constructor is only here for testing purposes.         
@@ -23,9 +24,10 @@ namespace ChatBackend
         /// ChatBackend constructor should be called with a delegate that is capable of displaying messages.         
         /// </summary>         
         /// <param name="dmd">DisplayMessageDelegate</param>         
-        public ChatBackend(DisplayMessageDelegate dmd)
+        public ChatBackend(DisplayMessageDelegate dmd, DisplayMessageDelegate dfd)
         {
             _displayMessageDelegate = dmd;
+            _displayFileDelegate = dfd;
             StartService();
         }
 
@@ -41,6 +43,11 @@ namespace ChatBackend
             { throw new ArgumentNullException("composite"); }
 
             _displayMessageDelegate?.Invoke(composite);
+        }
+
+        public void TransferFile(string filename, byte[] fileData)
+        {
+            _displayFileDelegate?.Invoke(new CompositeType(filename, fileData));
         }
 
         #endregion // Everything we need to receive messages 
@@ -69,6 +76,11 @@ namespace ChatBackend
                 // In order to send a message, we call our friends' DisplayMessage method                 
                 _channel.DisplayMessage(new CompositeType(_myUserName, text));
             }
+        }
+
+        public void SendFile(string filename, byte[] fileData)
+        {
+            _channel.TransferFile(filename, fileData);
         }
 
         private void StartService()
